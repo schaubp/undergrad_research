@@ -1,0 +1,108 @@
+###First Cell###
+ra_SF = np.hstack([ra_07, ra_14, ra_17, ra_20, ra_22, ra_24, ra_26, ra_28])
+dec_SF = np.hstack([dec_07, dec_14, dec_17, dec_20, dec_22, dec_24, dec_26, dec_28])
+f606_SF = np.hstack([f606_07, f606_14, f606_17, f606_20, f606_22, f606_24, f606_26, f606_28])
+f814_SF = np.hstack([f814_07, f814_14, f814_17, f814_20, f814_22, f814_24, f814_26, f814_28])
+
+
+
+###Second Cell
+
+def plotbox():
+    """
+    Plot a blue box showing the "Bright Blue Star" selection area.
+    """
+    x1 = -0.4
+    x2 = 0.2
+    y1 = 27
+    y2 = 23
+    plot((x1,x2),(y1,y1),'b-')
+    plot((x1,x2),(y2,y2),'b-')
+    plot((x1,x1),(y1,y2),'b-')
+    plot((x2,x2),(y1,y2),'b-')
+
+
+
+###Third Cell###
+
+figure(figsize(12,24))
+
+plt.subplot(4,2,1)
+briblu_03, = where (((-0.4) < (f606_03-f814_03)) & ((f606_03-f814_03) < (0.2)) & ((23) < (f814_03)) & ((f814_03) < (27)))
+plot((f606_03-f814_03)[briblu_03],f814_03[briblu_03], 'bo', alpha=0.55)   # alpha=0.55 is to make it partly transparent; 'bo' is a blue circle
+plot((f606_03-f814_03),f814_03, 'ro', alpha=0.15)
+plotbox()
+axis([-1,2.5,27.25,22.75])
+xlabel('F606W-F814W')
+ylabel('F814W')
+plt.title('Field 03 CMD ("Blue" Parameters Shown)')
+
+plt.subplot(4,2,2)
+briblu_04, = where (((-0.4) < (f606_04-f814_04)) & ((f606_04-f814_04) < (0.2)) & ((23) < (f814_04)) & ((f814_04) < (27)))
+plot((f606_04-f814_04)[briblu_04],f814_04[briblu_04], 'bo', alpha=0.55)   # alpha=0.55 is to make it partly transparent; 'bo' is a blue circle
+plot((f606_04-f814_04),f814_04, 'ro', alpha=0.15)
+plotbox()
+axis([-1,2.5,27.25,22.75])
+xlabel('F606W-F814W')
+ylabel('F814W')
+plt.title('Field 04 CMD ("Blue" Parameters Shown)')
+
+plt.subplot(4,2,3)
+briblu_05, = where (((-0.4) < (f606_05-f814_05)) & ((f606_05-f814_05) < (0.2)) & ((23) < (f814_05)) & ((f814_05) < (27)))
+plot((f606_05-f814_05)[briblu_05],f814_05[briblu_05], 'bo', alpha=0.55)   # alpha=0.55 is to make it partly transparent; 'bo' is a blue circle
+plot((f606_05-f814_05),f814_05, 'ro', alpha=0.15)
+plotbox()
+axis([-1,2.5,27.25,22.75])
+xlabel('F606W-F814W')
+ylabel('F814W')
+plt.title('Field 05 CMD ("Blue" Parameters Shown)')
+
+plt.subplot(4,2,4)
+briblu_06, = where (((-0.4) < (f606_06-f814_06)) & ((f606_06-f814_06) < (0.2)) & ((23) < (f814_06)) & ((f814_06) < (27)))
+plot((f606_06-f814_06)[briblu_06],f814_06[briblu_06], 'bo', alpha=0.55)   # alpha=0.55 is to make it partly transparent; 'bo' is a blue circle
+plot((f606_06-f814_06),f814_06, 'ro', alpha=0.15)
+plotbox()
+axis([-1,2.5,27.25,22.75])
+xlabel('F606W-F814W')
+ylabel('F814W')
+plt.title('Field 06 CMD ("Blue" Parameters Shown)')
+
+plt.subplot(4,2,5)
+briblu_08, = where (((-0.4) < (f606_08-f814_08)) & ((f606_08-f814_08) < (0.2)) & ((23) < (f814_08)) & ((f814_08) < (27)))
+plot((f606_08-f814_08)[briblu_08],f814_08[briblu_08], 'bo', alpha=0.55)   # alpha=0.55 is to make it partly transparent; 'bo' is a blue circle
+plot((f606_08-f814_08),f814_08, 'ro', alpha=0.15)
+plotbox()
+axis([-1,2.5,27.25,22.75])
+xlabel('F606W-F814W')
+ylabel('F814W')
+plt.title('Field 08 CMD ("Blue" Parameters Shown)')
+
+plt.subplot(4,2,6)
+briblu_12, = where (((-0.4) < (f606_12-f814_12)) & ((f606_12-f814_12) < (0.2)) & ((23) < (f814_12)) & ((f814_12) < (27)))
+plot((f606_12-f814_12)[briblu_12],f814_12[briblu_12], 'bo', alpha=0.55)   # alpha=0.55 is to make it partly transparent; 'bo' is a blue circle
+plot((f606_12-f814_12),f814_12, 'ro', alpha=0.15)
+plotbox()
+axis([-1,2.5,27.25,22.75])
+xlabel('F606W-F814W')
+ylabel('F814W')
+plt.title('Field 12 CMD ("Blue" Parameters Shown)')
+
+plt.subplot(4,2,7)
+briblu_16, = where (((-0.4) < (f606_16-f814_16)) & ((f606_16-f814_16) < (0.2)) & ((23) < (f814_16)) & ((f814_16) < (27)))
+plot((f606_16-f814_16)[briblu_16],f814_16[briblu_16], 'bo', alpha=0.55)   # alpha=0.55 is to make it partly transparent; 'bo' is a blue circle
+plot((f606_16-f814_16),f814_16, 'ro', alpha=0.15)
+plotbox()
+axis([-1,2.5,27.25,22.75])
+xlabel('F606W-F814W')
+ylabel('F814W')
+plt.title('Field 16 CMD ("Blue" Parameters Shown)')
+
+plt.subplot(4,2,8)
+briblu_SF, = where (((-0.4) < (f606_SF-f814_SF)) & ((f606_SF-f814_SF) < (0.2)) & ((23) < (f814_SF)) & ((f814_SF) < (27)))
+plot((f606_SF-f814_SF)[briblu_SF],f814_SF[briblu_SF], 'bo', alpha=0.55)   # alpha=0.55 is to make it partly transparent; 'bo' is a blue circle
+plot((f606_SF-f814_SF),f814_SF, 'ro', alpha=0.15)
+plotbox()
+axis([-1,2.5,27.25,22.75])
+xlabel('F606W-F814W')
+ylabel('F814W')
+plt.title('Sparse Fields CMD ("Blue" Parameters Shown)')
